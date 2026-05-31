@@ -57,7 +57,7 @@ pipeline {
 
                     cd gitops-environments
 
-                    yq e '.image.tag = "${IMAGE_TAG}"' \
+                    yq e '.backend.image.tag = "${IMAGE_TAG}"' \
                        -i dev/user-management/backend-values.yaml
 
                     git config user.email "jenkins@ci.com"
